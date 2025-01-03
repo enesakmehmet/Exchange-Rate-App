@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Modern Döviz Kuru Çevirici" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Döviz Kuru Çevirici</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main">
+        <div class="header-wrapper">
+          <h4>DOVİZ KURU ÇEVİRİCİ</h4>
+          <div class="live-rate">
+            <span id="currentRate"
+              >Anlık Kur: <strong>Yükleniyor...</strong></span
+            >
+            <span id="lastUpdate"></span>
+          </div>
+        </div>
+
+        <div class="content-warpper">
+          <input type="number" id="amount" placeholder="Miktar" />
+
+          <div class="currency-select-group">
+            <select id="firstCurrencyOption">
+              <option selected>USD</option>
+              <option>EUR</option>
+              <option>JPY</option>
+              <option>BGN</option>
+              <option>CZK</option>
+              <option>DKK</option>
+              <option>GBP</option>
+              <option>HUF</option>
+              <option>PLN</option>
+              <option>RON</option>
+              <option>SEK</option>
+              <option>CHF</option>
+              <option>ISK</option>
+              <option>NOK</option>
+              <option>HRK</option>
+              <option>RUB</option>
+              <option>TRY</option>
+              <option>AUD</option>
+              <option>BRL</option>
+              <option>CAD</option>
+              <option>CNY</option>
+              <option>HKD</option>
+              <option>IDR</option>
+              <option>ILS</option>
+              <option>INR</option>
+              <option>KRW</option>
+              <option>MXN</option>
+              <option>MYR</option>
+              <option>NZD</option>
+              <option>PHP</option>
+              <option>SGD</option>
+              <option>THB</option>
+              <option>ZAR</option>
+            </select>
+            <button
+              id="addFavorite"
+              class="icon-button"
+              title="Favorilere Ekle"
+            >
+              <i class="fas fa-star"></i>
+            </button>
+          </div>
+
+          <i class="fa-solid fa-arrow-right"></i>
+
+          <div class="currency-select-group">
+            <select id="secondCurrencyOption">
+              <option>USD</option>
+              <option>EUR</option>
+              <option>JPY</option>
+              <option>BGN</option>
+              <option>CZK</option>
+              <option>DKK</option>
+              <option>GBP</option>
+              <option>HUF</option>
+              <option>PLN</option>
+              <option>RON</option>
+              <option>SEK</option>
+              <option>CHF</option>
+              <option>ISK</option>
+              <option>NOK</option>
+              <option>HRK</option>
+              <option>RUB</option>
+              <option selected>TRY</option>
+              <option>AUD</option>
+              <option>BRL</option>
+              <option>CAD</option>
+              <option>CNY</option>
+              <option>HKD</option>
+              <option>IDR</option>
+              <option>ILS</option>
+              <option>INR</option>
+              <option>KRW</option>
+              <option>MXN</option>
+              <option>MYR</option>
+              <option>NZD</option>
+              <option>PHP</option>
+              <option>SGD</option>
+              <option>THB</option>
+              <option>ZAR</option>
+            </select>
+            <button
+              id="swapCurrencies"
+              class="icon-button"
+              title="Para Birimlerini Değiştir"
+            >
+              <i class="fas fa-exchange-alt"></i>
+            </button>
+          </div>
+
+          <input type="number" id="result" readonly placeholder="Sonuç" />
+        </div>
+
+        <div class="features-container">
+          <div class="tabs">
+            <button class="tab-button active" data-tab="favorites">
+              Favoriler
+            </button>
+            <button class="tab-button" data-tab="history">Geçmiş</button>
+          </div>
+
+          <div class="tab-content">
+            <div id="favoritesTab" class="tab-pane active">
+              <div id="favoritesList" class="list-container">
+                <!-- Favoriler buraya dinamik olarak eklenecek -->
+              </div>
+            </div>
+
+            <div id="historyTab" class="tab-pane">
+              <div id="conversionHistory" class="list-container">
+                <!-- Geçmiş çevrimler buraya dinamik olarak eklenecek -->
+              </div>
+              <button id="clearHistory" class="secondary-button">
+                Geçmişi Temizle
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings">
+          <label class="auto-update">
+            <input type="checkbox" id="autoUpdate" />
+            Otomatik Güncelle (60 sn)
+          </label>
+        </div>
+
+        <span class="copyright">Copyright - Enes Akmehmet</span>
+      </div>
+    </div>
+
+    <script src="currency.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.header-wrapper {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.header-wrapper h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.live-rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.content-warpper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.currency-select-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input {
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    width: 150px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+}
+
+input[readonly] {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+}
+
+select {
+    padding: 12px 15px;
+    border: 2px solid #e1e1e1;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #667eea;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+}
+
+.icon-button:hover {
+    background-color: rgba(102, 126, 234, 0.1);
+    transform: scale(1.1);
+}
+
+.fa-arrow-right {
+    font-size: 20px;
+    color: #667eea;
+    margin: 0 10px;
+}
+
+.features-container {
+    width: 100%;
+    margin-top: 30px;
+    border-top: 1px solid #e1e1e1;
+    padding-top: 20px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #667eea;
+    color: white;
+}
+
+.tab-content {
+    width: 100%;
+}
+
+.tab-pane {
+    display: none;
+    padding: 20px 0;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.list-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+}
+
+.list-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.list-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.list-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.secondary-button {
+    display: block;
+    margin: 15px auto 0;
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+    background-color: #c82333;
+}
+
+.settings {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.auto-update {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+.copyright {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    #main {
+        padding: 20px;
+    }
+    
+    .content-warpper {
+        flex-direction: column;
+    }
+    
+    input, select {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .fa-arrow-right {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+
+    .currency-select-group {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+}
